@@ -136,7 +136,6 @@
                 <p class="text-gray-500 text-sm">Fill out the form below and we'll help you get started with your next project.</p>
             </div>
 
-            <!-- UPDATED: Form now uses name attributes matching the Google Script -->
             <form name="google-sheet" onsubmit="handlePopupSubmit(event)" class="space-y-4">
                 <div>
                     <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Name</label>
@@ -144,7 +143,7 @@
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Phone Number</label>
-                    <input type="tel" name="Phone" required class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="+91 98765 43210">
+                    <input type="tel" name="Phone" required pattern="[0-9]{10}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-dark focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="9876543210" title="Please enter exactly 10 digits">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1">Interested In</label>
@@ -169,7 +168,6 @@
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2 group transition-transform hover:scale-105 duration-300">
-                <!-- UPDATED: Increased Logo Size from h-12 to h-16 -->
                 <img src="https://github.com/icreatepixels/Savior-Logo/raw/932278654a3010394ff5dcc398edf041cb501962/savoirlogoheader.png" alt="Savoir Studio" class="h-16 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('fallback-logo').style.display='flex';">
                 
                 <!-- Fallback Text Logo -->
@@ -185,11 +183,10 @@
                 <a href="#about" class="nav-link font-medium hover:text-primary transition-colors uppercase text-sm tracking-wide">Studio</a>
                 <a href="#services" class="nav-link font-medium hover:text-primary transition-colors uppercase text-sm tracking-wide">Services</a>
                 <a href="#amenities" class="nav-link font-medium hover:text-primary transition-colors uppercase text-sm tracking-wide">Amenities</a>
-                <!-- ADDED: Contact Us Link -->
                 <a href="#contact" class="nav-link font-medium hover:text-primary transition-colors uppercase text-sm tracking-wide">Contact Us</a>
             </div>
 
-            <!-- RESTORED: Book Now Button -->
+            <!-- Book Now Button -->
             <div class="hidden lg:block">
                 <a href="https://wa.me/919372708977" target="_blank" class="px-6 py-2 border-2 border-primary text-primary font-bold uppercase text-sm tracking-widest hover:bg-primary hover:text-white transition-all rounded-lg transform hover:-translate-y-1 hover:shadow-lg duration-300">
                     <i class="fab fa-whatsapp mr-2"></i>Book Now
@@ -232,10 +229,8 @@
         
         <!-- Slide 2: Cyclorama Focus -->
         <div class="hero-slide w-full h-full relative">
-            <!-- UPDATED: Replaced hero banner background image -->
             <img src="https://github.com/icreatepixels/Savior-Logo/blob/fe82457f47e9f025c6f3077750ef2081c4beedb5/Gemini_Generated_Image_lwue1clwue1clwue.png?raw=true" class="w-full h-full object-cover opacity-30 transform hover:scale-105 transition-transform duration-[20s]" alt="Cyc Wall">
             <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
-                <!-- UPDATED: Added animate-bounce class here -->
                 <h5 class="text-primary font-bold text-xl uppercase tracking-[0.3em] mb-4 animate-bounce">Infinite Possibilities</h5>
                 <h1 class="text-5xl md:text-7xl font-heading font-bold mb-6 hover:text-primary transition-colors duration-300">8ft x 8ft<br>Cyclorama Wall</h1>
                 <p class="text-xl max-w-2xl mb-8 font-light">First in Navi Mumbai. Perfect for fashion shoots, music videos, and creative projects.</p>
@@ -268,7 +263,6 @@
                     Savoir Studio is Navi Mumbai's premier creative hub. We provide the tools, infrastructure, and vibe you need to create professional content. From high-end podcasts to fashion shoots, we have you covered.
                 </p>
                 
-                <!-- UPDATED: Typewriter Effect Line -->
                 <p class="mb-8 text-xl font-heading font-bold text-dark">
                     Perfect space for <span id="about-typewriter" class="text-primary"></span><span class="animate-pulse text-primary">|</span>
                 </p>
@@ -328,7 +322,6 @@
         <div class="service-item group mb-0">
             <div class="grid md:grid-cols-2 items-center">
                 <div class="md:order-2 overflow-hidden h-96">
-                    <!-- UPDATED: Replaced image for Cyc Wall -->
                     <img class="zig-zag-img w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://github.com/icreatepixels/Savior-Logo/blob/fe82457f47e9f025c6f3077750ef2081c4beedb5/Gemini_Generated_Image_lwue1clwue1clwue.png?raw=true" alt="Cyclorama">
                 </div>
                 <div class="md:order-1 p-12 md:p-16 bg-secondary text-right group-hover:bg-orange-50 transition-colors duration-300">
@@ -396,7 +389,6 @@
 
             <!-- Amenity 2 -->
             <div class="amenity-item group relative overflow-hidden shadow-lg rounded-xl transform hover:-translate-y-2 transition-transform duration-300">
-                <!-- UPDATED: Replaced Waiting Area image -->
                 <img src="https://github.com/icreatepixels/Savior-Logo/blob/bf6702fc274f84e5d0717ba4df6d80af878d306e/Gemini_Generated_Image_s2jkgs2jkgs2jkgs.png?raw=true" class="w-full h-80 object-cover" alt="Waiting Area">
                 <div class="amenity-overlay absolute inset-0 flex flex-col justify-end p-6 text-white text-center pb-12">
                     <div class="text-4xl mb-2 animate-bounce"><i class="fas fa-couch"></i></div>
@@ -410,7 +402,6 @@
 
             <!-- Amenity 3 -->
             <div class="amenity-item group relative overflow-hidden shadow-lg rounded-xl transform hover:-translate-y-2 transition-transform duration-300">
-                <!-- UPDATED: Replaced Makeup Room image -->
                 <img src="https://github.com/icreatepixels/Savior-Logo/blob/97dbc715c472a2042873ef81c1cce5ca59600099/Gemini_Generated_Image_qnn5e6qnn5e6qnn5.png?raw=true" class="w-full h-80 object-cover" alt="Makeup Room">
                 <div class="amenity-overlay absolute inset-0 flex flex-col justify-end p-6 text-white text-center pb-12">
                     <div class="text-4xl mb-2 animate-bounce"><i class="fas fa-magic"></i></div>
@@ -540,7 +531,6 @@
                         </div>
                         <div class="flex items-start gap-4 group/item">
                             <i class="fas fa-map-marker-alt text-primary w-6 mt-1 group-hover/item:scale-125 transition-transform duration-300"></i>
-                            <!-- UPDATED: Added link to address text -->
                             <a href="https://share.google/CYB9hEQhpl8Aljt0W" target="_blank" class="hover:text-primary transition-colors hover:pl-1 duration-300 block">
                                 Office no 16, 1st floor, C-39A, Gami Industrial Park Pawane, Turbhe, Navi Mumbai, Maharashtra 400703
                             </a>
@@ -548,11 +538,8 @@
                     </div>
 
                     <div class="flex gap-4 mt-8">
-                        <!-- UPDATED: Added Instagram Link -->
                         <a href="https://www.instagram.com/ssbykmw/" target="_blank" class="w-10 h-10 border border-gray-600 rounded flex items-center justify-center hover:bg-primary hover:border-primary transition-all hover:scale-110 duration-300"><i class="fab fa-instagram"></i></a>
-                        <!-- UPDATED: Added YouTube Link -->
                         <a href="https://www.youtube.com/@savoirstudiobykmw" target="_blank" class="w-10 h-10 border border-gray-600 rounded flex items-center justify-center hover:bg-primary hover:border-primary transition-all hover:scale-110 duration-300"><i class="fab fa-youtube"></i></a>
-                        <!-- UPDATED: Added Twitter Link -->
                         <a href="https://x.com/savoirstudio" target="_blank" class="w-10 h-10 border border-gray-600 rounded flex items-center justify-center hover:bg-primary hover:border-primary transition-all hover:scale-110 duration-300"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
@@ -564,24 +551,22 @@
                     <a href="https://wa.me/919372708977" class="block w-full bg-primary text-white text-center font-bold uppercase tracking-widest py-4 hover:bg-orange-600 transition-all rounded mb-4 transform hover:scale-[1.02] duration-300">
                         <i class="fab fa-whatsapp mr-2"></i> Book via WhatsApp
                     </a>
-                    <!-- UPDATED: Corrected Google Maps Link -->
-            <a href="https://share.google/KAIiOd2YX8xiT3zl4" target="_blank" class="block w-full border border-gray-600 text-white text-center font-bold uppercase tracking-widest py-4 hover:bg-white hover:text-dark transition-all rounded transform hover:scale-[1.02] duration-300">
-                <i class="fas fa-map mr-2"></i> Get Directions
-            </a>
+                    <a href="https://share.google/KAIiOd2YX8xiT3zl4" target="_blank" class="block w-full border border-gray-600 text-white text-center font-bold uppercase tracking-widest py-4 hover:bg-white hover:text-dark transition-all rounded transform hover:scale-[1.02] duration-300">
+                        <i class="fas fa-map mr-2"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Savoir Studio. All Rights Reserved.</p>
+            </div>
         </div>
     </div>
-    
-    <div class="border-t border-gray-800 mt-16 pt-8 text-center text-gray-500 text-sm">
-        <!-- UPDATED: Copyright Year to 2026 -->
-        <p>&copy; 2026 Savoir Studio. All Rights Reserved.</p>
-    </div>
-</div>
-</div>
 
 
-<!-- Javascript Logic -->
+    <!-- Javascript Logic -->
     <script>
-        const apiKey = ""; // API Key injected at runtime
+        const apiKey = ""; 
 
         // Spinner Removal
         window.addEventListener('load', () => {
@@ -615,7 +600,6 @@
             slides[slideIndex].classList.add("active");
         }
         
-        // UPDATED: Changed auto-slide interval from 5000ms (5s) to 8000ms (8s)
         setInterval(() => changeSlide(1), 8000);
 
         // Testimonial Slider Logic
@@ -649,7 +633,7 @@
         }, 6000);
 
 
-        // Navbar Scroll Effect - Removed resizing logic
+        // Navbar Scroll Effect
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             if (window.scrollY > 50) {
@@ -705,11 +689,7 @@
         const content = document.getElementById('popup-content');
 
         function openPopup() {
-            // Check if user has already closed it (Uncomment next line to enable "only once" behavior)
-            // if (localStorage.getItem('savoir_popup_seen')) return;
-
             popup.classList.remove('hidden');
-            // Small delay to allow display:block to apply before opacity transition
             setTimeout(() => {
                 backdrop.classList.remove('opacity-0');
                 content.classList.remove('scale-95', 'opacity-0');
@@ -724,9 +704,8 @@
             
             setTimeout(() => {
                 popup.classList.add('hidden');
-            }, 300); // Wait for transition to finish
+            }, 300);
 
-            // Save to localStorage so it doesn't pop up again this session
             localStorage.setItem('savoir_popup_seen', 'true');
         }
 
@@ -736,15 +715,15 @@
             const originalText = btn.innerText;
             const form = e.target;
             
-            // --- IMPORTANT: PASTE YOUR GOOGLE SCRIPT URL HERE ---
-            // UPDATED: Added the provided Google Script URL
+            // Google Script URL
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxOht9NPSJjT7pQwCFXkckw-hL6x_vkqVdBPelVTrWzsm9IuQTpkHCNyfmJhgdHUFmO3g/exec'; 
-            // -----------------------------------------------------
 
             btn.innerText = "Sending...";
             
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            // UPDATED: Added mode: 'no-cors' to fix white screen/blocking issues
+            fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
                 .then(response => {
+                    // With no-cors, we assume success as we receive an opaque response
                     btn.innerText = "Sent!";
                     btn.classList.add('bg-green-600');
                     setTimeout(() => {
